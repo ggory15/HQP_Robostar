@@ -153,4 +153,4 @@ ADD_SUBDIRECTORY(src)
 
 add_executable(test_robostar demo-robostar/demo.cpp)
 PKG_CONFIG_USE_DEPENDENCY(test_robostar eigen3)
-target_link_libraries(test_robostar HQP rbdl qpOASES pthread)
+target_link_libraries(test_robostar HQP rbdl qpOASES pthread -lrt)

@@ -309,6 +309,12 @@ termios.h
 -
 unistd.h
 -
+time.h
+-
+stdint.h
+-
+stdlib.h
+-
 
 /home/ggory15/vrep/programming/include/v_repConst.h
 

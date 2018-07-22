@@ -16,6 +16,7 @@ generator = Unix Makefiles
 PATH /home/ggory15/HPP_OPT/install/sbin
 PATH /home/ggory15/HPP_OPT/install/bin
 PATH /opt/ros/kinetic/bin
+PATH /home/ggory15/HPP_OPT/install/sbin
 PATH /home/ggory15/bin
 PATH /home/ggory15/.local/bin
 PATH /usr/local/sbin
@@ -27,6 +28,8 @@ PATH /bin
 PATH /usr/games
 PATH /usr/local/games
 PATH /snap/bin
+PATH /opt/openrobots/sbin
+PATH /opt/openrobots/bin
 PATH /opt/openrobots/sbin
 PATH /opt/openrobots/bin
 

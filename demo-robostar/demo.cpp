@@ -80,6 +80,20 @@ int nq;
 using namespace HQP;
 using namespace std;
 
+#define time_check
+#ifdef time_check
+#include <time.h>
+#include <stdint.h>
+#include <stdlib.h>
+
+#define BILLION 1000000000L
+
+int localpid(void) {
+ static int a[9] = { 0 };
+ return a[0];
+}
+#endif
+
 int main()
 {
    robot_ = new HQP::robot::RobotModel(0); // 0: Manipulator, 1: Mobile Manipulaotr, 2: humanoid
@@ -146,6 +160,12 @@ int main()
 
 	double start_time = 0.0;
 	VectorXd q_init(dof);
+
+#ifdef time_check
+	uint64_t diff;
+ 	struct timespec start, end;
+ 	int i;
+#endif
 
 	while (vb.simConnectionCheck() && !vb.exitFlag)
 	{
@@ -279,7 +299,10 @@ int main()
 						trajPosture->setStartTime(start_time);
 						trajPosture->setReference(qdes);
 						mode_change = false;			
-					}			
+					}		
+#ifdef time_check
+ 	clock_gettime(CLOCK_MONOTONIC, &start); /* mark start time */
+#endif	
 					trajPosture->setCurrentTime(vrep_time);
 					sampleJoint = trajPosture->computeNext();
 					jointTask->setReference(sampleJoint);
@@ -292,6 +315,15 @@ int main()
 					const solver::HQPOutput & sol = solver->solve(HQPData);
 					const VectorXd & tau = invdyn_->getActuatorForces(sol);
 					vb.desired_torque_ = tau;
+
+#ifdef time_check
+ 	clock_gettime(CLOCK_MONOTONIC, &end); /* mark start time */
+	diff = BILLION * (end.tv_sec - start.tv_sec) + end.tv_nsec - start.tv_nsec;
+	if (vb._cntt  % 100 == 1){
+		cout << "milli time" << diff / 1000000.0 << endl;			
+		HQP_flag = false;
+	}
+#endif
 				}
 				else if (ctrl_mode == 3){
 					if (mode_change){
@@ -340,7 +372,9 @@ int main()
 						trajPostureConstant->setReference(qdes);
 						mode_change = false;			
 					}
-
+#ifdef time_check
+ 	clock_gettime(CLOCK_MONOTONIC, &start); /* mark start time */
+#endif
 					sampleJoint = trajPostureConstant->computeNext();
 					jointTask->setReference(sampleJoint);
 
@@ -358,7 +392,15 @@ int main()
 					const solver::HQPOutput & sol = solver->solve(HQPData);
 					const VectorXd & tau = invdyn_->getActuatorForces(sol);
 					vb.desired_torque_ = tau;
+#ifdef time_check
+ 	clock_gettime(CLOCK_MONOTONIC, &end); /* mark start time */
+	diff = BILLION * (end.tv_sec - start.tv_sec) + end.tv_nsec - start.tv_nsec;
+	if (vb._cntt  % 100 == 1){
+		cout << "milli time" << diff / 1000000.0 << endl;			
+		HQP_flag = false;
+	}
 
+#endif
 
 				}
 				
