@@ -51,7 +51,11 @@ set (VREP_ROOT
     $ENV{HOME}/vrep/
     CACHE "VRep root dir" STRING)
 
+add_definitions(-DXENOMAI)
+
 include_directories(
+  /opt/etherlab/include
+  /usr/xenomai/include -D_GNU_SOURCE -D_REENTRANT -D__XENO__
   ${EIGEN3_INCLUDE_DIR} 
   ${RBDL_INCLUDE_DIR}
   ${VREP_ROOT}/programming/include 
@@ -149,8 +153,13 @@ add_definitions (-DNON_MATLAB_PARSING)
 add_definitions (-DMAX_EXT_API_CONNECTIONS=255)
 add_definitions (-DDO_NOT_USE_SHARED_MEMORY)
 add_definitions (-Ddof=7)
+add_definitions (-DDOF=7)
 ADD_SUBDIRECTORY(src)
 
-add_executable(test_robostar demo-robostar/demo.cpp)
+
+add_executable(test_robostar demo-robostar/demo.cpp src/hardware/ethercat_elmo.cpp)
 PKG_CONFIG_USE_DEPENDENCY(test_robostar eigen3)
-target_link_libraries(test_robostar HQP rbdl qpOASES pthread -lrt)
+target_link_libraries(test_robostar HQP rbdl qpOASES pthread -lrt
+ -L/opt/etherlab/lib -lethercat
+ -L/usr/xenomai/lib -lrtdm  -lnative -lxenomai
+)

@@ -1,0 +1,554 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+   <FileVersion major="1" minor="6" />
+   <Project>
+      <Option title="HQP" />
+      <Option makefile_is_custom="1" />
+      <Option compiler="gcc" />
+      <Option virtualFolders="CMake Files\;CMake Files\cmake\;CMake Files\src\;" />
+      <Build>
+      <Target title="all">
+         <Option working_dir="/home/dyros/HQP_Robostar/build" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/dyros/HQP_Robostar/build/Makefile&quot;  VERBOSE=1 all" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/dyros/HQP_Robostar/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/dyros/HQP_Robostar/build/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/dyros/HQP_Robostar/build/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="deb">
+         <Option working_dir="/home/dyros/HQP_Robostar/build" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/dyros/HQP_Robostar/build/Makefile&quot;  VERBOSE=1 deb" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/dyros/HQP_Robostar/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/dyros/HQP_Robostar/build/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/dyros/HQP_Robostar/build/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="deb-src">
+         <Option working_dir="/home/dyros/HQP_Robostar/build" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/dyros/HQP_Robostar/build/Makefile&quot;  VERBOSE=1 deb-src" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/dyros/HQP_Robostar/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/dyros/HQP_Robostar/build/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/dyros/HQP_Robostar/build/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="dist">
+         <Option working_dir="/home/dyros/HQP_Robostar/build" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/dyros/HQP_Robostar/build/Makefile&quot;  VERBOSE=1 dist" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/dyros/HQP_Robostar/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/dyros/HQP_Robostar/build/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/dyros/HQP_Robostar/build/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="dist_tarbz2">
+         <Option working_dir="/home/dyros/HQP_Robostar/build" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/dyros/HQP_Robostar/build/Makefile&quot;  VERBOSE=1 dist_tarbz2" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/dyros/HQP_Robostar/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/dyros/HQP_Robostar/build/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/dyros/HQP_Robostar/build/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="dist_targz">
+         <Option working_dir="/home/dyros/HQP_Robostar/build" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/dyros/HQP_Robostar/build/Makefile&quot;  VERBOSE=1 dist_targz" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/dyros/HQP_Robostar/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/dyros/HQP_Robostar/build/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/dyros/HQP_Robostar/build/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="dist_tarxz">
+         <Option working_dir="/home/dyros/HQP_Robostar/build" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/dyros/HQP_Robostar/build/Makefile&quot;  VERBOSE=1 dist_tarxz" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/dyros/HQP_Robostar/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/dyros/HQP_Robostar/build/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/dyros/HQP_Robostar/build/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="distcheck">
+         <Option working_dir="/home/dyros/HQP_Robostar/build" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/dyros/HQP_Robostar/build/Makefile&quot;  VERBOSE=1 distcheck" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/dyros/HQP_Robostar/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/dyros/HQP_Robostar/build/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/dyros/HQP_Robostar/build/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="distclean">
+         <Option working_dir="/home/dyros/HQP_Robostar/build" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/dyros/HQP_Robostar/build/Makefile&quot;  VERBOSE=1 distclean" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/dyros/HQP_Robostar/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/dyros/HQP_Robostar/build/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/dyros/HQP_Robostar/build/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="distdir">
+         <Option working_dir="/home/dyros/HQP_Robostar/build" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/dyros/HQP_Robostar/build/Makefile&quot;  VERBOSE=1 distdir" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/dyros/HQP_Robostar/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/dyros/HQP_Robostar/build/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/dyros/HQP_Robostar/build/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="distorig">
+         <Option working_dir="/home/dyros/HQP_Robostar/build" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/dyros/HQP_Robostar/build/Makefile&quot;  VERBOSE=1 distorig" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/dyros/HQP_Robostar/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/dyros/HQP_Robostar/build/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/dyros/HQP_Robostar/build/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="install">
+         <Option working_dir="/home/dyros/HQP_Robostar/build" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/dyros/HQP_Robostar/build/Makefile&quot;  VERBOSE=1 install" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/dyros/HQP_Robostar/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/dyros/HQP_Robostar/build/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/dyros/HQP_Robostar/build/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="install/local">
+         <Option working_dir="/home/dyros/HQP_Robostar/build" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/dyros/HQP_Robostar/build/Makefile&quot;  VERBOSE=1 install/local" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/dyros/HQP_Robostar/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/dyros/HQP_Robostar/build/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/dyros/HQP_Robostar/build/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="install/strip">
+         <Option working_dir="/home/dyros/HQP_Robostar/build" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/dyros/HQP_Robostar/build/Makefile&quot;  VERBOSE=1 install/strip" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/dyros/HQP_Robostar/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/dyros/HQP_Robostar/build/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/dyros/HQP_Robostar/build/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="list_install_components">
+         <Option working_dir="/home/dyros/HQP_Robostar/build" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/dyros/HQP_Robostar/build/Makefile&quot;  VERBOSE=1 list_install_components" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/dyros/HQP_Robostar/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/dyros/HQP_Robostar/build/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/dyros/HQP_Robostar/build/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="rebuild_cache">
+         <Option working_dir="/home/dyros/HQP_Robostar/build" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/dyros/HQP_Robostar/build/Makefile&quot;  VERBOSE=1 rebuild_cache" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/dyros/HQP_Robostar/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/dyros/HQP_Robostar/build/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/dyros/HQP_Robostar/build/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="release">
+         <Option working_dir="/home/dyros/HQP_Robostar/build" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/dyros/HQP_Robostar/build/Makefile&quot;  VERBOSE=1 release" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/dyros/HQP_Robostar/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/dyros/HQP_Robostar/build/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/dyros/HQP_Robostar/build/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="test">
+         <Option working_dir="/home/dyros/HQP_Robostar/build" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/dyros/HQP_Robostar/build/Makefile&quot;  VERBOSE=1 test" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/dyros/HQP_Robostar/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/dyros/HQP_Robostar/build/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/dyros/HQP_Robostar/build/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="test_robostar">
+         <Option output="/home/dyros/HQP_Robostar/build/test_robostar" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/dyros/HQP_Robostar/build" />
+         <Option object_output="./" />
+         <Option type="1" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add option="-DXENOMAI" />
+            <Add option="-DBOOST_TEST_DYN_LINK" />
+            <Add option="-DNON_MATLAB_PARSING" />
+            <Add option="-DMAX_EXT_API_CONNECTIONS=255" />
+            <Add option="-DDO_NOT_USE_SHARED_MEMORY" />
+            <Add option="-Ddof=7" />
+            <Add option="-DDOF=7" />
+            <Add directory="/home/dyros/HQP_Robostar/-D_GNU_SOURCE" />
+            <Add directory="/home/dyros/HQP_Robostar/-D_REENTRANT" />
+            <Add directory="/home/dyros/HQP_Robostar/-D__XENO__" />
+            <Add directory="/home/dyros/HQP_Robostar/build" />
+            <Add directory="/home/dyros/HQP_Robostar/build/include" />
+            <Add directory="/home/dyros/HQP_Robostar/include" />
+            <Add directory="/home/dyros/vrep/programming/include" />
+            <Add directory="/home/dyros/vrep/programming/remoteApi" />
+            <Add directory="/include" />
+            <Add directory="/opt/etherlab/include" />
+            <Add directory="/remoteApi" />
+            <Add directory="/usr/include/eigen3" />
+            <Add directory="/usr/local/include" />
+            <Add directory="/usr/xenomai/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/dyros/HQP_Robostar/build/Makefile&quot;  VERBOSE=1 test_robostar" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/dyros/HQP_Robostar/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/dyros/HQP_Robostar/build/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/dyros/HQP_Robostar/build/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="test_robostar/fast">
+         <Option output="/home/dyros/HQP_Robostar/build/test_robostar" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/dyros/HQP_Robostar/build" />
+         <Option object_output="./" />
+         <Option type="1" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add option="-DXENOMAI" />
+            <Add option="-DBOOST_TEST_DYN_LINK" />
+            <Add option="-DNON_MATLAB_PARSING" />
+            <Add option="-DMAX_EXT_API_CONNECTIONS=255" />
+            <Add option="-DDO_NOT_USE_SHARED_MEMORY" />
+            <Add option="-Ddof=7" />
+            <Add option="-DDOF=7" />
+            <Add directory="/home/dyros/HQP_Robostar/-D_GNU_SOURCE" />
+            <Add directory="/home/dyros/HQP_Robostar/-D_REENTRANT" />
+            <Add directory="/home/dyros/HQP_Robostar/-D__XENO__" />
+            <Add directory="/home/dyros/HQP_Robostar/build" />
+            <Add directory="/home/dyros/HQP_Robostar/build/include" />
+            <Add directory="/home/dyros/HQP_Robostar/include" />
+            <Add directory="/home/dyros/vrep/programming/include" />
+            <Add directory="/home/dyros/vrep/programming/remoteApi" />
+            <Add directory="/include" />
+            <Add directory="/opt/etherlab/include" />
+            <Add directory="/remoteApi" />
+            <Add directory="/usr/include/eigen3" />
+            <Add directory="/usr/local/include" />
+            <Add directory="/usr/xenomai/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/dyros/HQP_Robostar/build/Makefile&quot;  VERBOSE=1 test_robostar/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/dyros/HQP_Robostar/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/dyros/HQP_Robostar/build/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/dyros/HQP_Robostar/build/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="uninstall">
+         <Option working_dir="/home/dyros/HQP_Robostar/build" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/dyros/HQP_Robostar/build/Makefile&quot;  VERBOSE=1 uninstall" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/dyros/HQP_Robostar/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/dyros/HQP_Robostar/build/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/dyros/HQP_Robostar/build/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="HQP">
+         <Option output="/home/dyros/HQP_Robostar/build/src/libHQP.so" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/dyros/HQP_Robostar/build/src" />
+         <Option object_output="./" />
+         <Option type="3" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add option="-DXENOMAI" />
+            <Add option="-DBOOST_TEST_DYN_LINK" />
+            <Add option="-DNON_MATLAB_PARSING" />
+            <Add option="-DMAX_EXT_API_CONNECTIONS=255" />
+            <Add option="-DDO_NOT_USE_SHARED_MEMORY" />
+            <Add option="-Ddof=7" />
+            <Add option="-DDOF=7" />
+            <Add directory="/home/dyros/HQP_Robostar/-D_GNU_SOURCE" />
+            <Add directory="/home/dyros/HQP_Robostar/-D_REENTRANT" />
+            <Add directory="/home/dyros/HQP_Robostar/-D__XENO__" />
+            <Add directory="/home/dyros/HQP_Robostar/build" />
+            <Add directory="/home/dyros/HQP_Robostar/build/include" />
+            <Add directory="/home/dyros/HQP_Robostar/include" />
+            <Add directory="/home/dyros/vrep/programming/include" />
+            <Add directory="/home/dyros/vrep/programming/remoteApi" />
+            <Add directory="/include" />
+            <Add directory="/opt/etherlab/include" />
+            <Add directory="/remoteApi" />
+            <Add directory="/usr/include/eigen3" />
+            <Add directory="/usr/local/include" />
+            <Add directory="/usr/xenomai/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/dyros/HQP_Robostar/build/src/Makefile&quot;  VERBOSE=1 HQP" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/dyros/HQP_Robostar/build/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/dyros/HQP_Robostar/build/src/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/dyros/HQP_Robostar/build/src/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="HQP/fast">
+         <Option output="/home/dyros/HQP_Robostar/build/src/libHQP.so" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/dyros/HQP_Robostar/build/src" />
+         <Option object_output="./" />
+         <Option type="3" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add option="-DXENOMAI" />
+            <Add option="-DBOOST_TEST_DYN_LINK" />
+            <Add option="-DNON_MATLAB_PARSING" />
+            <Add option="-DMAX_EXT_API_CONNECTIONS=255" />
+            <Add option="-DDO_NOT_USE_SHARED_MEMORY" />
+            <Add option="-Ddof=7" />
+            <Add option="-DDOF=7" />
+            <Add directory="/home/dyros/HQP_Robostar/-D_GNU_SOURCE" />
+            <Add directory="/home/dyros/HQP_Robostar/-D_REENTRANT" />
+            <Add directory="/home/dyros/HQP_Robostar/-D__XENO__" />
+            <Add directory="/home/dyros/HQP_Robostar/build" />
+            <Add directory="/home/dyros/HQP_Robostar/build/include" />
+            <Add directory="/home/dyros/HQP_Robostar/include" />
+            <Add directory="/home/dyros/vrep/programming/include" />
+            <Add directory="/home/dyros/vrep/programming/remoteApi" />
+            <Add directory="/include" />
+            <Add directory="/opt/etherlab/include" />
+            <Add directory="/remoteApi" />
+            <Add directory="/usr/include/eigen3" />
+            <Add directory="/usr/local/include" />
+            <Add directory="/usr/xenomai/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/dyros/HQP_Robostar/build/src/Makefile&quot;  VERBOSE=1 HQP/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/dyros/HQP_Robostar/build/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/dyros/HQP_Robostar/build/src/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/dyros/HQP_Robostar/build/src/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      </Build>
+      <Unit filename="/home/dyros/HQP_Robostar/demo-robostar/demo.cpp">
+      </Unit>
+      <Unit filename="/home/dyros/HQP_Robostar/src/constraint/constraint-base.cpp">
+      </Unit>
+      <Unit filename="/home/dyros/HQP_Robostar/src/constraint/constraint-bound.cpp">
+      </Unit>
+      <Unit filename="/home/dyros/HQP_Robostar/src/constraint/constraint-equality.cpp">
+      </Unit>
+      <Unit filename="/home/dyros/HQP_Robostar/src/constraint/constraint-inequality.cpp">
+      </Unit>
+      <Unit filename="/home/dyros/HQP_Robostar/src/controller/inverse-dynamics.cpp">
+      </Unit>
+      <Unit filename="/home/dyros/HQP_Robostar/src/hardware/ethercat_elmo.cpp">
+      </Unit>
+      <Unit filename="/home/dyros/HQP_Robostar/src/robot/robot_model.cpp">
+      </Unit>
+      <Unit filename="/home/dyros/HQP_Robostar/src/solvers/solver-HQP-base.cpp">
+      </Unit>
+      <Unit filename="/home/dyros/HQP_Robostar/src/solvers/solver-HQP-eiquadprog.cpp">
+      </Unit>
+      <Unit filename="/home/dyros/HQP_Robostar/src/solvers/solver-HQP-factory.cpp">
+      </Unit>
+      <Unit filename="/home/dyros/HQP_Robostar/src/solvers/solver-HQP-qpoases.cpp">
+      </Unit>
+      <Unit filename="/home/dyros/HQP_Robostar/src/solvers/solver-utils.cpp">
+      </Unit>
+      <Unit filename="/home/dyros/HQP_Robostar/src/tasks/task-base.cpp">
+      </Unit>
+      <Unit filename="/home/dyros/HQP_Robostar/src/tasks/task-com.cpp">
+      </Unit>
+      <Unit filename="/home/dyros/HQP_Robostar/src/tasks/task-joint-bounds.cpp">
+      </Unit>
+      <Unit filename="/home/dyros/HQP_Robostar/src/tasks/task-joint-posture.cpp">
+      </Unit>
+      <Unit filename="/home/dyros/HQP_Robostar/src/tasks/task-mobile.cpp">
+      </Unit>
+      <Unit filename="/home/dyros/HQP_Robostar/src/tasks/task-motion.cpp">
+      </Unit>
+      <Unit filename="/home/dyros/HQP_Robostar/src/tasks/task-operational.cpp">
+      </Unit>
+      <Unit filename="/home/dyros/HQP_Robostar/src/tasks/task-singualrity.cpp">
+      </Unit>
+      <Unit filename="/home/dyros/HQP_Robostar/src/trajectories/trajectory-jointspace.cpp">
+      </Unit>
+      <Unit filename="/home/dyros/HQP_Robostar/src/trajectories/trajectory-operationalspace.cpp">
+      </Unit>
+      <Unit filename="/home/dyros/HQP_Robostar/src/utils/utils.cpp">
+      </Unit>
+      <Unit filename="/home/dyros/HQP_Robostar/src/vrep_bridge/vrep_bridge.cpp">
+      </Unit>
+      <Unit filename="/home/dyros/vrep/programming/remoteApi/extApi.c">
+      </Unit>
+      <Unit filename="/home/dyros/vrep/programming/remoteApi/extApiPlatform.c">
+      </Unit>
+      <Unit filename="/home/dyros/HQP_Robostar/include/constraint/constraint-base.h">
+      </Unit>
+      <Unit filename="/home/dyros/HQP_Robostar/include/constraint/constraint-bound.h">
+      </Unit>
+      <Unit filename="/home/dyros/HQP_Robostar/include/constraint/constraint-equality.h">
+      </Unit>
+      <Unit filename="/home/dyros/HQP_Robostar/include/constraint/constraint-inequality.h">
+      </Unit>
+      <Unit filename="/home/dyros/HQP_Robostar/include/constraint/fwd_constraints.h">
+      </Unit>
+      <Unit filename="/home/dyros/HQP_Robostar/include/contacts/contact-3d.h">
+      </Unit>
+      <Unit filename="/home/dyros/HQP_Robostar/include/contacts/contact-base.h">
+      </Unit>
+      <Unit filename="/home/dyros/HQP_Robostar/include/controller/Inverse-dynamics.h">
+      </Unit>
+      <Unit filename="/home/dyros/HQP_Robostar/include/fwd.h">
+      </Unit>
+      <Unit filename="/home/dyros/HQP_Robostar/include/robot/robot_model.h">
+      </Unit>
+      <Unit filename="/home/dyros/HQP_Robostar/include/solvers/eiquadprog_2011.h">
+      </Unit>
+      <Unit filename="/home/dyros/HQP_Robostar/include/solvers/fwd_solver.h">
+      </Unit>
+      <Unit filename="/home/dyros/HQP_Robostar/include/solvers/solver-HQP-base.h">
+      </Unit>
+      <Unit filename="/home/dyros/HQP_Robostar/include/solvers/solver-HQP-eiquadprog.h">
+      </Unit>
+      <Unit filename="/home/dyros/HQP_Robostar/include/solvers/solver-HQP-factory.h">
+      </Unit>
+      <Unit filename="/home/dyros/HQP_Robostar/include/solvers/solver-HQP-factory.hxx">
+      </Unit>
+      <Unit filename="/home/dyros/HQP_Robostar/include/solvers/solver-HQP-output.h">
+      </Unit>
+      <Unit filename="/home/dyros/HQP_Robostar/include/solvers/solver-HQP-qpoases.h">
+      </Unit>
+      <Unit filename="/home/dyros/HQP_Robostar/include/solvers/solver-utils.h">
+      </Unit>
+      <Unit filename="/home/dyros/HQP_Robostar/include/tasks/task-base.h">
+      </Unit>
+      <Unit filename="/home/dyros/HQP_Robostar/include/tasks/task-com.h">
+      </Unit>
+      <Unit filename="/home/dyros/HQP_Robostar/include/tasks/task-joint-bounds.h">
+      </Unit>
+      <Unit filename="/home/dyros/HQP_Robostar/include/tasks/task-joint-posture.h">
+      </Unit>
+      <Unit filename="/home/dyros/HQP_Robostar/include/tasks/task-mobile.h">
+      </Unit>
+      <Unit filename="/home/dyros/HQP_Robostar/include/tasks/task-motion.h">
+      </Unit>
+      <Unit filename="/home/dyros/HQP_Robostar/include/tasks/task-operational.h">
+      </Unit>
+      <Unit filename="/home/dyros/HQP_Robostar/include/tasks/task-singularity.h">
+      </Unit>
+      <Unit filename="/home/dyros/HQP_Robostar/include/tasks/trajectory-base.h">
+      </Unit>
+      <Unit filename="/home/dyros/HQP_Robostar/include/trajectories/trajectory-base.h">
+      </Unit>
+      <Unit filename="/home/dyros/HQP_Robostar/include/trajectories/trajectory-jointspace.h">
+      </Unit>
+      <Unit filename="/home/dyros/HQP_Robostar/include/trajectories/trajectory-operationalspace.h">
+      </Unit>
+      <Unit filename="/home/dyros/HQP_Robostar/include/utils/container.h">
+      </Unit>
+      <Unit filename="/home/dyros/HQP_Robostar/include/utils/motion.h">
+      </Unit>
+      <Unit filename="/home/dyros/HQP_Robostar/include/utils/utils.h">
+      </Unit>
+      <Unit filename="/home/dyros/HQP_Robostar/include/vrep_bridge/vrep_bridge.h">
+      </Unit>
+      <Unit filename="/home/dyros/HQP_Robostar/src/hardware/ethercat_elmo.h">
+      </Unit>
+      <Unit filename="/home/dyros/vrep/programming/remoteApi/extApi.h">
+      </Unit>
+      <Unit filename="/home/dyros/vrep/programming/remoteApi/extApiPlatform.h">
+      </Unit>
+      <Unit filename="/home/dyros/HQP_Robostar/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\" />
+      </Unit>
+      <Unit filename="/home/dyros/HQP_Robostar/cmake/base.cmake">
+          <Option virtualFolder="CMake Files\cmake\" />
+      </Unit>
+      <Unit filename="/home/dyros/HQP_Robostar/cmake/logging.cmake">
+          <Option virtualFolder="CMake Files\cmake\" />
+      </Unit>
+      <Unit filename="/home/dyros/HQP_Robostar/cmake/portability.cmake">
+          <Option virtualFolder="CMake Files\cmake\" />
+      </Unit>
+      <Unit filename="/home/dyros/HQP_Robostar/cmake/compiler.cmake">
+          <Option virtualFolder="CMake Files\cmake\" />
+      </Unit>
+      <Unit filename="/home/dyros/HQP_Robostar/cmake/debian.cmake">
+          <Option virtualFolder="CMake Files\cmake\" />
+      </Unit>
+      <Unit filename="/home/dyros/HQP_Robostar/cmake/dist.cmake">
+          <Option virtualFolder="CMake Files\cmake\" />
+      </Unit>
+      <Unit filename="/home/dyros/HQP_Robostar/cmake/distcheck.cmake">
+          <Option virtualFolder="CMake Files\cmake\" />
+      </Unit>
+      <Unit filename="/home/dyros/HQP_Robostar/cmake/doxygen.cmake">
+          <Option virtualFolder="CMake Files\cmake\" />
+      </Unit>
+      <Unit filename="/home/dyros/HQP_Robostar/cmake/header.cmake">
+          <Option virtualFolder="CMake Files\cmake\" />
+      </Unit>
+      <Unit filename="/home/dyros/HQP_Robostar/cmake/pkg-config.cmake">
+          <Option virtualFolder="CMake Files\cmake\" />
+      </Unit>
+      <Unit filename="/home/dyros/HQP_Robostar/cmake/shared-library.cmake">
+          <Option virtualFolder="CMake Files\cmake\" />
+      </Unit>
+      <Unit filename="/home/dyros/HQP_Robostar/cmake/uninstall.cmake">
+          <Option virtualFolder="CMake Files\cmake\" />
+      </Unit>
+      <Unit filename="/home/dyros/HQP_Robostar/cmake/install-data.cmake">
+          <Option virtualFolder="CMake Files\cmake\" />
+      </Unit>
+      <Unit filename="/home/dyros/HQP_Robostar/cmake/release.cmake">
+          <Option virtualFolder="CMake Files\cmake\" />
+      </Unit>
+      <Unit filename="/home/dyros/HQP_Robostar/cmake/version.cmake">
+          <Option virtualFolder="CMake Files\cmake\" />
+      </Unit>
+      <Unit filename="/home/dyros/HQP_Robostar/cmake/boost.cmake">
+          <Option virtualFolder="CMake Files\cmake\" />
+      </Unit>
+      <Unit filename="/home/dyros/HQP_Robostar/cmake/FindRBDL.cmake">
+          <Option virtualFolder="CMake Files\cmake\" />
+      </Unit>
+      <Unit filename="/home/dyros/HQP_Robostar/cmake/ide.cmake">
+          <Option virtualFolder="CMake Files\cmake\" />
+      </Unit>
+      <Unit filename="/home/dyros/HQP_Robostar/cmake/GNUInstallDirs.cmake">
+          <Option virtualFolder="CMake Files\cmake\" />
+      </Unit>
+      <Unit filename="/home/dyros/HQP_Robostar/cmake/config.hh.cmake">
+          <Option virtualFolder="CMake Files\cmake\" />
+      </Unit>
+      <Unit filename="/home/dyros/HQP_Robostar/cmake/deprecated.hh.cmake">
+          <Option virtualFolder="CMake Files\cmake\" />
+      </Unit>
+      <Unit filename="/home/dyros/HQP_Robostar/cmake/warning.hh.cmake">
+          <Option virtualFolder="CMake Files\cmake\" />
+      </Unit>
+      <Unit filename="/home/dyros/HQP_Robostar/cmake/config.h.cmake">
+          <Option virtualFolder="CMake Files\cmake\" />
+      </Unit>
+      <Unit filename="/home/dyros/HQP_Robostar/cmake/cmake_uninstall.cmake.in">
+          <Option virtualFolder="CMake Files\cmake\" />
+      </Unit>
+      <Unit filename="/home/dyros/HQP_Robostar/src/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\src\" />
+      </Unit>
+   </Project>
+</CodeBlocks_project_file>

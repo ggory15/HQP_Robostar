@@ -53,7 +53,7 @@ namespace HQP
 			double m_hessian_regularization;
 
 			Eigen::VectorXi m_activeSet[5];  /// vector containing the indexes of the active inequalities
-			Eigen::Index m_activeSetSize[5];
+			IndexSet m_activeSetSize[5];
 
 #ifdef ELIMINATE_EQUALITY_CONSTRAINTS
 			//      Eigen::FullPivLU<Matrix>                        m_CE_dec;

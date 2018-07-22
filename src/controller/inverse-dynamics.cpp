@@ -330,7 +330,7 @@ bool InverseDynamics::decodeSolution(const HQPOutput & sol)
 		
 		m_tau = h_a;
 		//m_tau.setZero();
-		m_tau.noalias() += M_a*m_dv -0.5 * m_robot.getRealJointVelocity();
+        m_tau.noalias() += M_a*m_dv;// -0.5 * m_robot.getRealJointVelocity();
 
 		m_solutionDecoded = true;
 	

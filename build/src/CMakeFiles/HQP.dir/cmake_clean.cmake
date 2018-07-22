@@ -1,4 +1,4 @@
-file(REMOVE_RECURSE
+FILE(REMOVE_RECURSE
   "CMakeFiles/HQP.dir/constraint/constraint-base.cpp.o"
   "CMakeFiles/HQP.dir/constraint/constraint-equality.cpp.o"
   "CMakeFiles/HQP.dir/constraint/constraint-inequality.cpp.o"
@@ -20,8 +20,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/HQP.dir/solvers/solver-utils.cpp.o"
   "CMakeFiles/HQP.dir/robot/robot_model.cpp.o"
   "CMakeFiles/HQP.dir/controller/inverse-dynamics.cpp.o"
-  "CMakeFiles/HQP.dir/home/ggory15/vrep/programming/remoteApi/extApi.c.o"
-  "CMakeFiles/HQP.dir/home/ggory15/vrep/programming/remoteApi/extApiPlatform.c.o"
+  "CMakeFiles/HQP.dir/home/dyros/vrep/programming/remoteApi/extApi.c.o"
+  "CMakeFiles/HQP.dir/home/dyros/vrep/programming/remoteApi/extApiPlatform.c.o"
   "CMakeFiles/HQP.dir/utils/utils.cpp.o"
   "CMakeFiles/HQP.dir/vrep_bridge/vrep_bridge.cpp.o"
   "libHQP.pdb"
@@ -29,6 +29,6 @@ file(REMOVE_RECURSE
 )
 
 # Per-language clean rules from dependency scanning.
-foreach(lang C CXX)
-  include(CMakeFiles/HQP.dir/cmake_clean_${lang}.cmake OPTIONAL)
-endforeach()
+FOREACH(lang C CXX)
+  INCLUDE(CMakeFiles/HQP.dir/cmake_clean_${lang}.cmake OPTIONAL)
+ENDFOREACH(lang)

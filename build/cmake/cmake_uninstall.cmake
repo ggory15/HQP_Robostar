@@ -15,9 +15,9 @@
 #
 # This files comes from the CMake FAQ: http://www.cmake.org/Wiki/CMake_FAQ
 cmake_policy(SET CMP0007 OLD)
-IF(NOT EXISTS "/home/ggory15/Robostar/build/install_manifest.txt")
-  MESSAGE(FATAL_ERROR "Cannot find install manifest:\"/home/ggory15/Robostar/build/install_manifest.txt\"")
-ENDIF(NOT EXISTS "/home/ggory15/Robostar/build/install_manifest.txt")
+IF(NOT EXISTS "/home/dyros/HQP_Robostar/build/install_manifest.txt")
+  MESSAGE(FATAL_ERROR "Cannot find install manifest:\"/home/dyros/HQP_Robostar/build/install_manifest.txt\"")
+ENDIF(NOT EXISTS "/home/dyros/HQP_Robostar/build/install_manifest.txt")
 
 MESSAGE(STATUS "catkin path: /usr/local/.catkin")
 IF(EXISTS "/usr/local/.catkin")
@@ -31,7 +31,7 @@ IF(EXISTS "/usr/local/.catkin")
 ENDIF(EXISTS "/usr/local/.catkin")
 
 
-FILE(READ "/home/ggory15/Robostar/build/install_manifest.txt" files)
+FILE(READ "/home/dyros/HQP_Robostar/build/install_manifest.txt" files)
 STRING(REGEX REPLACE "\n" ";" files "${files}")
 LIST(REVERSE files)
 FOREACH(file ${files})

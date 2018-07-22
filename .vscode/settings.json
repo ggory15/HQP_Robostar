@@ -4,6 +4,8 @@
         "*.ipp": "cpp",
         "functional": "cpp",
         "chrono": "cpp",
-        "typeinfo": "cpp"
+        "typeinfo": "cpp",
+        "dense": "cpp",
+        "iostream": "cpp"
     }
 }
