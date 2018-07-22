@@ -30,6 +30,7 @@
 
 #include <string>
 #include <vector>
+#include <iomanip>
 //#include <conio.h> // for keyboard hit
 
 // for vrep keyboard event
@@ -109,6 +110,8 @@ int localpid(void) {
 #endif
 
 
+FILE *hqp_file1;
+
 RT_TASK ethercatTask;
 bool quit_flag = false;
 bool ethercat_task_flag = false;
@@ -116,7 +119,7 @@ bool mode_change = false;
 bool value_changed = false;
 int ctrl_mode = 0;
 bool HQP_flag = false;
-
+bool cout_enable = false;
 void cleanup_all(void)
 {
     if(ethercat_task_flag)
@@ -155,14 +158,14 @@ void ethercat_task(void *arg)
 
 
 	jointTask = new tasks::TaskJointPosture("joint_control_task", *robot_);
-    double kp_posture = 2000.0, w_posture = 1.00;
+    double kp_posture = 3000.0, w_posture = 1.00;
 	jointTask->Kp(kp_posture*VectorXd::Ones(robot_->nv()));
 	jointTask->Kd(2.0*jointTask->Kp().cwiseSqrt());
 
 	moveTask = new tasks::TaskOperationalSpace("end_effector_task", *robot_, 7);
-    double kp_move = 1000.0, w_move = 1.0;
+    double kp_move = 3000.0, w_move = 1.0;
 	VectorXd a = VectorXd::Ones(6);
-	a.tail(3) *= 10.0;
+    //a.tail(3) *= 10.0;
 	moveTask->Kp(kp_move*a);
 	moveTask->Kd(2.0*moveTask->Kp().cwiseSqrt());
 	moveTask->setSingular(false);
@@ -269,7 +272,7 @@ void ethercat_task(void *arg)
 				jointTask->setReference(sampleJoint);
 
                 const solver::HQPData & HQPData = invdyn_->computeProblemData(control_time, q_current, qdot_current);
-                if (tick  % ((int)Hz / 10) == 0){
+                if (HQP_flag){
 					cout << solver::HQPDataToString(HQPData, true) << endl;			
 					HQP_flag = false;
 				}
@@ -308,7 +311,7 @@ clock_gettime(CLOCK_MONOTONIC, &start); /* mark start time */
 				jointTask->setReference(sampleJoint);
 
                 const solver::HQPData & HQPData = invdyn_->computeProblemData(control_time, q_current, qdot_current);
-                if (tick  % ((int)Hz / 10) == 0){
+                if (HQP_flag){
 					cout << solver::HQPDataToString(HQPData, true) << endl;			
 					HQP_flag = false;
 				}
@@ -325,12 +328,13 @@ if (tick  % ((int)Hz / 10) == 1){
 }
 #endif
 			}
-			else if (ctrl_mode == 3){
+            else if (ctrl_mode == 3){
 				if (mode_change){
 					cout << "x + 20 cm for 1 sec" << endl;
 					cout << "This mode has joint limit avoidance" << endl;
 					cout << "This mode has joint posture control" << endl;
 
+                    q_init = q_current;
                     start_time = control_time;
 				
 					// Level 0 : Joint Velocity Limit for Mobile + Manipulator 
@@ -339,12 +343,12 @@ if (tick  % ((int)Hz / 10) == 1){
 
 					// Level 1: Operational Task Control
 					invdyn_->addOperationalTask(*moveTask, w_move, 1, 0.0);
-                //	invdyn_->addOperationalTask(*move2Task, w_move, 1, 0.0);
+                    invdyn_->addOperationalTask(*move2Task, w_move, 1, 0.0);
 
 					Transform3d init_T = robot_->getTransformation(7);
 					Transform3d goal_T = init_T;
 					//goal_T.linear() = rot_temp * goal_T.linear(); 
-                    goal_T.translation()(2) += 0.2;
+                    goal_T.translation()(2) += 0.3;
 					//trajEE->setReference(goal_T);
 					
 					trajEECubic = new trajectories::TrajectoryOperationCubic("op_traj");
@@ -354,29 +358,37 @@ if (tick  % ((int)Hz / 10) == 1){
 					trajEECubic->setStartTime(start_time);
 					trajEECubic->setReference(goal_T);						
 					
-					trajEEConstant = new trajectories::TrajectoryOperationConstant("op_const");
-					trajEEConstant->setReference(goal_T);
+                    trajEEConstant = new trajectories::TrajectoryOperationConstant("op_const");
+                    trajEEConstant->setReference(goal_T);
 					// Level 2: Joint Task Control with low gain
-					kp_posture = 300.0;
+                    kp_posture = 3000.0;
 					jointTask->Kp(kp_posture*VectorXd::Ones(robot_->nv()));
 					jointTask->Kd(2.0*jointTask->Kp().cwiseSqrt());
 
-                    //invdyn_->addJointPostureTask(*jointTask, 1.0, 2, 0.0); //weight, level, duration
+                    invdyn_->addJointPostureTask(*jointTask, 1.0, 2, 0.0); //weight, level, duration
 
 					qdes.setZero();
-					// qdes(1) = -M_PI/4.0;
+                    qdes(0) = +M_PI/4.0;
 					// qdes(3) = -M_PI/2.0;
 					// qdes(5) = M_PI/4.0;
 
-					trajPostureConstant = new trajectories::TrajectoryJointConstant("joint_traj_const"); 
-					trajPostureConstant->setReference(qdes);
-					mode_change = false;			
+                    //trajPostureConstant = new trajectories::TrajectoryJointConstant("joint_traj_const");
+                    //trajPostureConstant->setReference(qdes);
+                    trajPosture = new trajectories::TrajectoryJointCubic("joint_traj");
+                    trajPosture->setInitSample(q_init);
+                    trajPosture->setGoalSample(qdes);
+                    trajPosture->setDuration(10.0);
+                    trajPosture->setStartTime(start_time);
+                    trajPosture->setReference(qdes);
+
+                    mode_change = false;
 				}
 #ifdef time_check
 clock_gettime(CLOCK_MONOTONIC, &start); /* mark start time */
 #endif
-				sampleJoint = trajPostureConstant->computeNext();
-				jointTask->setReference(sampleJoint);
+                trajPosture->setCurrentTime(control_time);
+                sampleJoint = trajPosture->computeNext();
+                jointTask->setReference(sampleJoint);
 
                 trajEECubic->setCurrentTime(control_time);
 				s = trajEECubic->computeNext();
@@ -392,6 +404,22 @@ clock_gettime(CLOCK_MONOTONIC, &start); /* mark start time */
 				const solver::HQPOutput & sol = solver->solve(HQPData);
 				const VectorXd & tau = invdyn_->getActuatorForces(sol);
 				desired_torque = tau;
+
+
+                for(int i=0; i<3; i++)
+                {
+                    fprintf(hqp_file1,"%lf\t",s.pos(i));
+                }
+                for(int i=0; i<7; i++)
+                {
+                    fprintf(hqp_file1,"%lf\t",q_current(i));
+                }
+                for(int i=0; i<3; i++)
+                {
+                    fprintf(hqp_file1,"%lf\t",robot_->getTransformation(7).translation()(i));
+                }
+                fprintf(hqp_file1,"\n");
+
 #ifdef time_check
 clock_gettime(CLOCK_MONOTONIC, &end); /* mark start time */
 diff = BILLION * (end.tv_sec - start.tv_sec) + end.tv_nsec - start.tv_nsec;
@@ -403,11 +431,15 @@ if (tick  % ((int)Hz / 10) == 1){
 #endif
 
 			}
-            if ((tick % ((int)Hz / 10)) == 0)
+            if (((tick % ((int)Hz / 10)) == 0) && cout_enable)
             {
+
                 cout << "des torque:" << endl;
-                cout << desired_torque.transpose() << endl;
+                cout << std::setprecision(3) <<  desired_torque.transpose() << endl;
+                cout << "position:" << endl;
+                cout << std::setprecision(3) << q_current.transpose() << endl;
             }
+
 			for (size_t i = 0; i < DOF; i++)
             {
                 ElmoGoldDevice::elmo_gold_rx & rxPDO = elmo.device_[i].rxPDO;
@@ -443,7 +475,7 @@ int main()
     // for v-rep
     signal(SIGTERM, catch_signal);
     signal(SIGINT, catch_signal);
-
+    hqp_file1 = fopen("hqp_test.txt","w");
     /* rt_print task*/
     rt_print_auto_init(1);
 
@@ -476,6 +508,7 @@ int main()
 		if (_kbhit()) {
 			int key;
 			key = getchar();
+            key = tolower(key);
 			switch (key)
 			{
 			case 'g': // for gravity compensation
@@ -506,7 +539,8 @@ int main()
 
 			}
 		}
-	}
+    }
+    fclose(hqp_file1);
 
 	return 0;
 }
