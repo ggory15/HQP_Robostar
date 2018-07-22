@@ -1,11 +1,11 @@
 # HQP_DualArmMobile
-HQP_DualArmMobile for Ubuntu 16.04
+Robostar robot controller for using HQP and task-transition algorithm
 
-This module is to control manipulator or humanoid robot using HQP.
 The base of this code is TSID algorithm of Gepetto team in CNRS.
 
-I modified some function and added some tasks for controlling robot safely.
-(For instance, task transition algorithm, singularity avoidance algorithm, and self-collision avoidance algorithm)
+I added some functions for avoiding singularity and obstacle avoidance in real-time.
+
+This module is needed V-Rep which is an robotics simulator with Vortex Engine.
 
 ```Dependency```
 
